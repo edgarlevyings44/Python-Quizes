@@ -14,7 +14,7 @@ class ChipComponent:
         for chip in self.chips:
             print(chip)
 
-# Example usage:
+# Sample usage:
 component = ChipComponent(max_chips=3, max_text_length=6)
 
 sampleChips = [
@@ -28,4 +28,7 @@ sampleChips = [
 for chip in sampleChips:
     component.add_chip(chip['label'])
 
-component.display_chips()
+# Displaying the chips
+result = component.display_chips(component.chips, maxChipsDisplayed=3, maxTextLength=6)
+for item in result:
+    print(item)
